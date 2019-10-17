@@ -3,7 +3,7 @@ package asu.ser.fse.facade;
 import asu.ser.fse.facade.Entity.Assignment;
 import asu.ser.fse.facade.Entity.Course;
 import asu.ser.fse.facade.Entity.Solution;
-import asu.ser.fse.facade.Entity.User;
+import asu.ser.fse.facade.Entity.Person;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class FacadeHACS implements HACS_Interface {
     }
 
     @Override
-    public Assignment addAssignment(User thePerson) {
+    public Assignment addAssignment(Person thePerson) {
         return null;
     }
 
@@ -34,12 +34,12 @@ public class FacadeHACS implements HACS_Interface {
     }
 
     @Override
-    public Assignment remind(User user) {
+    public Assignment remind(Person person) {
         return null;
     }
 
     @Override
-    public void createUser(User user) {
+    public void createUser(Person person) {
 
     }
 
@@ -59,7 +59,7 @@ public class FacadeHACS implements HACS_Interface {
     }
 
     @Override
-    public void courseOperation(User user) {
+    public void courseOperation(Person person) {
 
     }
 }
