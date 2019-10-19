@@ -30,7 +30,7 @@ public abstract class Person {
 
     }
 
-    abstract void showMenu();
+    abstract void showMenu(CourseMenu theCourseMenu);
 
     public abstract String getName();
 
@@ -40,13 +40,14 @@ public abstract class Person {
 
     public abstract int getUserType();
 
-    abstract void CreateCourseMenu();
+    public abstract CourseMenu CreateCourseMenu(int nCourseLevel);
 
 
+    public CourseMenu getTheCourseMenu() {
+        return theCourseMenu;
+    }
 
-
-
-
-
-
+    public void setTheCourseMenu(CourseMenu theCourseMenu) {
+        this.theCourseMenu = theCourseMenu;
+    }
 }

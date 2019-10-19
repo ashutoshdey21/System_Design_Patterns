@@ -18,7 +18,7 @@ public interface HACS_Interface {
     Person thePerson = null;
 
     boolean login(Person person, String id, String password);
-    abstract Assignment addAssignment(Person thePerson);
+    abstract Assignment addAssignment(Person thePerson, Course course);
     String gradeSolution(Solution solution);
     void reportSolution(String grade);
     boolean submitSolution(Solution solution);

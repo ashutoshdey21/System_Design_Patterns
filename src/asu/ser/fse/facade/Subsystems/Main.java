@@ -18,7 +18,7 @@ public class Main {
 
         /*This demonstrates the Facade Pattern via implementing the Login functionality*/
 
-        FacadeHACS facadeHACS=new FacadeHACS();
+        HACS_Interface facadeHACS=new FacadeHACS();
         /*Login for Student*/
         if (facadeHACS.login(student, student.getUserId(), student.getPassword()))
             System.out.println("Student Login Successful");
@@ -29,6 +29,20 @@ public class Main {
         if (facadeHACS.login(instructor, instructor.getUserId(), instructor.getPassword()))
             System.out.println("Instructor Login Successful");
         else System.out.println("Instructor Login Failed");
+
+
+
+        /*This demonstrates the Bridge Pattern via implementing the Course functionality
+        * Dive further for the Factory Pattern*/
+        System.out.println("Showing the Course Menu for Student");
+        facadeHACS.courseOperation(student);
+        System.out.println("Showing the Course Menu for Instructor");
+        facadeHACS.courseOperation(instructor);
+
+
+
+
+
 
 
 

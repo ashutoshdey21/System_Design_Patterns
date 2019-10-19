@@ -1,17 +1,19 @@
 package asu.ser.fse.facade.Entity;
 
+import asu.ser.fse.facade.Subsystems.CourseMenu;
+import asu.ser.fse.facade.Subsystems.HighLevelCourseMenu;
+import asu.ser.fse.facade.Subsystems.LowLevelCourseMenu;
+
 public class Student extends Person {
 
 
     @Override
-    void showMenu() {
+    void showMenu(CourseMenu theCourseMenu) {
 
-
-
-    }
-
-    @Override
-    void CreateCourseMenu() {
+        theCourseMenu.showViewButton();
+        theCourseMenu.showAddButton();
+        theCourseMenu.showRadioButton();
+        theCourseMenu.showLabels();
 
     }
 
@@ -44,6 +46,15 @@ public class Student extends Person {
 
         userType=0;
         return this.userType;
+    }
+
+    /*This demonstrates the Factory Pattern via implementing the CreateCourseMenu functionality*/
+    @Override
+    public CourseMenu CreateCourseMenu(int nCourseLevel) {
+
+        if(nCourseLevel==0) return new LowLevelCourseMenu();
+        else return new HighLevelCourseMenu();
+
     }
 
 

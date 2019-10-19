@@ -21,7 +21,7 @@ public class FacadeHACS implements HACS_Interface {
     }
 
     @Override
-    public Assignment addAssignment(Person thePerson) {
+    public Assignment addAssignment(Person thePerson, Course course) {
         return null;
     }
 
@@ -65,8 +65,22 @@ public class FacadeHACS implements HACS_Interface {
         return null;
     }
 
+    /*Dive further for the Factory Pattern*/
     @Override
     public void courseOperation(Person person) {
 
+        System.out.println("Starting Course Operation");
+        System.out.println("Showing the High Level Menu");
+        person.setTheCourseMenu(person.CreateCourseMenu(1));
+
+        System.out.println("Showing the Low Level Menu");
+        person.setTheCourseMenu(person.CreateCourseMenu(0));
+
+        person.showAddButton();
+        person.showLabels();
+        person.showRadioButton();
+        person.showViewButton();
+
     }
+
 }
