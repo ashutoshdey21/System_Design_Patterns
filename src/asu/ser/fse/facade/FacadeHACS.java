@@ -2,15 +2,19 @@ package asu.ser.fse.facade;
 
 import asu.ser.fse.facade.Entity.Assignment;
 import asu.ser.fse.facade.Entity.Course;
-import asu.ser.fse.facade.Entity.Solution;
 import asu.ser.fse.facade.Entity.Person;
+import asu.ser.fse.facade.Entity.Solution;
 
 import java.util.List;
 
 public class FacadeHACS implements HACS_Interface {
     @Override
-    public boolean login(String id, String password) {
-        return false;
+    public boolean login(Person person, String id, String password) {
+
+        System.out.println("You have reached the Login method of FacadeHACS implements HACS_Interface.");
+        if(id.length()>0 && password.length()>0)
+            return true;
+        else return false;
     }
 
     @Override
