@@ -7,9 +7,9 @@ public abstract class NodeVisitor {
 
     Reminder reminder=new Reminder();
 
-    public abstract FacadeHACS visitFacade();
-    public abstract Assignment visitAssignment(Assignment assignment);
-    public abstract Course visitCourse(CourseList courses);
+    public abstract void visitFacade(FacadeHACS facadeHACS);
+    public abstract void visitAssignment(Assignment assignment);
+    public abstract void visitCourse(CourseList courses);
 
 
 }

@@ -1,8 +1,20 @@
 package asu.ser.fse.facade.Entity;
 
-import java.util.List;
+
 
 public class Course {
 
-    List<Assignment> assignmentList;
+     String courseName;
+
+    public Course(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
 }

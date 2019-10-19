@@ -9,7 +9,7 @@ public class CourseIterator extends ListIterator<Course> {
     int size;
     List<Course> courseList;
 
-    CourseIterator(List<Course> courseList){
+    public CourseIterator(List<Course> courseList){
         this.courseList = courseList;
         this.size = courseList.size();
         this.index= 0;
@@ -56,13 +56,14 @@ public class CourseIterator extends ListIterator<Course> {
 
     }
 
+
     /**
      * Returns an iterator over elements of type {@code T}.
      *
      * @return an Iterator.
      */
     @Override
-    public Iterator<Course> iterator() {
+    public Iterator iterator() {
         return null;
     }
 }

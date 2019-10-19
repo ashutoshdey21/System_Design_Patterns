@@ -9,7 +9,7 @@ public class SolutionIterator extends ListIterator<Solution> {
     int size;
     List<Solution> solutionList;
 
-    SolutionIterator(List<Solution> solutionList){
+    public SolutionIterator(List<Solution> solutionList){
         this.solutionList=solutionList;
         this.size = solutionList.size();
         this.index= 0;

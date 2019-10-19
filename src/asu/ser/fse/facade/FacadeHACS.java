@@ -1,20 +1,22 @@
 package asu.ser.fse.facade;
 
-import asu.ser.fse.facade.Entity.Assignment;
-import asu.ser.fse.facade.Entity.Course;
-import asu.ser.fse.facade.Entity.Person;
-import asu.ser.fse.facade.Entity.Solution;
+import asu.ser.fse.facade.Entity.*;
 import asu.ser.fse.facade.Subsystems.Login;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class FacadeHACS implements HACS_Interface {
 
 
+    public Person thePerson;
+    public CourseList courseList;
+
     @Override
     public boolean login(Person person, String id, String password) {
 
         System.out.println("You have reached the Login method of FacadeHACS implements HACS_Interface.");
+        this.thePerson=person;
         return new Login().verifyLogin(person, id, password);
 
 
@@ -56,7 +58,22 @@ public class FacadeHACS implements HACS_Interface {
     }
 
     @Override
-    public void attachCourseToUser(List<Course> courseList) {
+    public void attachCourseToUser(List<Course> courseList, List<Person> personList) {
+
+        System.out.println(Arrays.toString(courseList.toArray()));
+        System.out.println(Arrays.toString(personList.toArray()));
+
+        for(Person person : personList) {
+            for(Course course : courseList) {
+                person.courseList.add(course);
+            }
+        }
+
+
+    }
+
+    public void accept(NodeVisitor visitor) {
+        visitor.visitFacade(this);
 
     }
 

@@ -2,8 +2,11 @@ package asu.ser.fse.facade.Entity;
 
 import asu.ser.fse.facade.Subsystems.CourseMenu;
 
+import java.awt.*;
+
 public abstract class Person {
 
+    public CourseList courseList;
     protected String name;
     protected String id;
     protected String password;
@@ -14,7 +17,6 @@ public abstract class Person {
 
     public void showAddButton(){
 
-        System.out.println();
 
     }
     public void showViewButton(){

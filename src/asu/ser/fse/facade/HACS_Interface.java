@@ -12,7 +12,7 @@ import java.util.List;
 public interface HACS_Interface {
 
     int UserType = 0;
-    Course theSelectedCourse = new Course();
+    Course theSelectedCourse = new Course("");
     int nCourseLevel = 0;
     List<Course> theCourseList = null;
     Person thePerson = null;
@@ -25,7 +25,7 @@ public interface HACS_Interface {
     Assignment remind(Person person);
     void createUser(Person person);
     List<Course> createCourseList();
-    void attachCourseToUser(List<Course> courseList);
+    void attachCourseToUser(List<Course> courseList, List<Person> personList);
     Course SelectCourse(List<Course> courseList);
     void courseOperation(Person person);
 

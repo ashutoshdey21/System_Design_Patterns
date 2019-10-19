@@ -4,7 +4,17 @@ import java.util.List;
 
 public class Solution {
 
-    Instructor instructor;
-    List<Student> studentList;
+    String solutionContent;
 
+    public Solution(String solutionContent) {
+        this.solutionContent = solutionContent;
+    }
+
+    public String getSolutionContent() {
+        return solutionContent;
+    }
+
+    public void setSolutionContent(String solutionContent) {
+        this.solutionContent = solutionContent;
+    }
 }
