@@ -8,7 +8,7 @@ public class Student extends Person {
 
 
     @Override
-    void showMenu(CourseMenu theCourseMenu) {
+    public void showMenu(CourseMenu theCourseMenu) {
 
         theCourseMenu.showViewButton();
         theCourseMenu.showAddButton();

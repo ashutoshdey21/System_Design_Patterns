@@ -76,10 +76,8 @@ public class FacadeHACS implements HACS_Interface {
         System.out.println("Showing the Low Level Menu");
         person.setTheCourseMenu(person.CreateCourseMenu(0));
 
-        person.showAddButton();
-        person.showLabels();
-        person.showRadioButton();
-        person.showViewButton();
+        person.showMenu(person.getTheCourseMenu());
+
 
     }
 

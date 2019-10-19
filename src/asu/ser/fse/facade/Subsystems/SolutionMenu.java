@@ -3,6 +3,6 @@ package asu.ser.fse.facade.Subsystems;
 import asu.ser.fse.facade.FacadeHACS;
 
 public class SolutionMenu {
-    FacadeHACS getFunctionality=new FacadeHACS();
+
 
 }

@@ -1,6 +1,5 @@
 package asu.ser.fse.facade.Entity;
 
-import asu.ser.fse.facade.FacadeHACS;
 import asu.ser.fse.facade.Subsystems.CourseMenu;
 
 public abstract class Person {
@@ -30,7 +29,7 @@ public abstract class Person {
 
     }
 
-    abstract void showMenu(CourseMenu theCourseMenu);
+    public abstract void showMenu(CourseMenu theCourseMenu);
 
     public abstract String getName();
 
