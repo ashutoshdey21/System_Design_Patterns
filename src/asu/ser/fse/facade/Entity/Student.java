@@ -4,27 +4,9 @@ public class Student extends Person {
 
 
     @Override
-    public void showAddButton() {
-
-    }
-
-    @Override
-    public void showViewButton() {
-
-    }
-
-    @Override
-    public void showRadioButton() {
-
-    }
-
-    @Override
-    public void showLabels() {
-
-    }
-
-    @Override
     void showMenu() {
+
+
 
     }
 

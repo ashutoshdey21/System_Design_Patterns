@@ -3,6 +3,8 @@ package asu.ser.fse.facade.Subsystems;
 import asu.ser.fse.facade.Entity.Instructor;
 import asu.ser.fse.facade.Entity.Person;
 import asu.ser.fse.facade.Entity.Student;
+import asu.ser.fse.facade.FacadeHACS;
+import asu.ser.fse.facade.HACS_Interface;
 
 public class Main {
 
@@ -15,16 +17,20 @@ public class Main {
 
 
         /*This demonstrates the Facade Pattern via implementing the Login functionality*/
-        Login login=new Login();
+
+        FacadeHACS facadeHACS=new FacadeHACS();
         /*Login for Student*/
-        if (login.verifyLogin(student, student.getUserId(), student.getPassword()))
+        if (facadeHACS.login(student, student.getUserId(), student.getPassword()))
             System.out.println("Student Login Successful");
         else System.out.println("Student Login Failed");
 
+
         /*Login for Instructor*/
-        if (login.verifyLogin(instructor, instructor.getUserId(), instructor.getPassword()))
+        if (facadeHACS.login(instructor, instructor.getUserId(), instructor.getPassword()))
             System.out.println("Instructor Login Successful");
         else System.out.println("Instructor Login Failed");
+
+
 
 
 

@@ -13,12 +13,22 @@ public abstract class Person {
     private CourseMenu theCourseMenu;
     Assignment assignment;
 
-    public abstract void showAddButton();
-    public abstract void showViewButton();
+    public void showAddButton(){
 
-    public abstract void showRadioButton();
+        System.out.println();
 
-    public abstract void showLabels();
+    }
+    public void showViewButton(){
+
+    }
+
+    public void showRadioButton(){
+
+    }
+
+    public void showLabels(){
+
+    }
 
     abstract void showMenu();
 
